@@ -1,0 +1,57 @@
+.table {
+    display: table;
+    width: 100%;
+    border-collapse:collapse;
+}
+
+.row {
+    display: table-row;
+    width: 100%;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.row:hover {
+    background-color: #f5f5f5;
+}
+
+.cell {
+    display: table-cell;
+    padding: 15px;
+}
+.inactive{
+    pointer-events: none;
+    opacity: 0.3;
+    background: #CCC;
+}
+
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+.header {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #808087;
+}
+.regularRow{
+    font-size: 1rem;
+    font-weight: 350;
+    color: black;
+
+}
+
+.price{
+    color: #EC773C;
+}
+.multiple{
+    color: #5E91D0;
+    background-color: #ECF2FD ;
+}
+.multiple{
+    color: #5E91D0;
+    background-color: #ECF2FD ;
+
+}
