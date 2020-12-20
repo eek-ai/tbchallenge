@@ -1,0 +1,19 @@
+.searchbox {
+    display: flex;
+    border: 1px solid black;
+}
+.search {
+    flex:1;
+    border: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 200px;
+}
+.search:focus {
+    outline: none;
+}
+
+
+.searchicon {
+
+}
