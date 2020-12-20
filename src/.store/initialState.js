@@ -1,13 +1,34 @@
 const initialState = {
-    data: {
-        headers: ['SPECIES', 'FINISHING', 'THICKNESS, MM', 'WIDTH, MM', 'LENGTH, MM', 'PRICE PER M' + String.fromCharCode(179)],
-        rows: [['Brazilian, Italian', 'KD, PL, RO, KK, RK', '15', '140', '1800 / 2440', '€149'],
-            ['German', 'KD, PL, RO, KK, RK', '15', '140', '1800 / 2440', '€144'],
-            ['Ukrainian, English', 'RK', '15', '140', '1800 / 2440', '€155'],
-            ['Brazilian, Italian', 'KD, PL, RO, KK, RK', '15', '140', '1800 / 2440', '€217']
-        ],
-        show: {}
+
+    columns: {
+        name:{
+            style:'left',
+        },
+        species:{
+            title:'SPECIES',
+            style:'left',
+        },
+        finishing:{
+            title:'FINISHING',
+            style:'left',
+        },
+        thickness:{
+            title:'THICKNESS, MM',
+            style:'right',
+        },
+        width:{
+            title:'WIDTH, MM',
+        },
+        length:{
+            title:'LENGTH, MM',
+        },
+        price:{
+            title:'PRICE PER M' + String.fromCharCode(179),
+            style:'right',
+        },
     },
+
+    rows: [],
 }
 
 export default initialState;

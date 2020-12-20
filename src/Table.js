@@ -12,14 +12,14 @@ class Table extends React.Component {
         return (
             <div className="table">
                 <div className="row header">
-                    {this.props.headers&&this.props.headers.map((header)=>(
-                        <div className="cell">{header}</div>
+                    {this.props.columns&&Object.keys(this.props.columns).map((fieldName,h)=> (
+                        <div className="cell" key={h}>{(this.props.columns[fieldName].title === undefined) ? fieldName : this.props.columns[fieldName].title}</div>
                     ))}
                 </div>
-                {this.props.data&&this.props.data.map((row,i)=>(
-                    <div className={"row regularRow" + ((i==2)?' inactive':'')}>
-                        {row.map((cellData)=> (
-                            <div className="cell left">{cellData}</div>
+                {this.props.data&&this.props.columns&&this.props.data.map((row,i)=>(
+                    <div className={"row regularRow" + ((row['active']!=true)?' inactive':'')} key={i}>
+                        {Object.keys(this.props.columns).map((fieldName,j)=> (
+                            <div className={"cell "+this.props.columns[fieldName].style} key={j}>{row[fieldName]}</div>
                         ))}
                     </div>
                 ))}
