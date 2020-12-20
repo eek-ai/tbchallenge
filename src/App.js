@@ -1,5 +1,7 @@
 import './App.css';
 import Table from './Table';
+import SearchField from './SearchField';
+
 
 function App() {
 
@@ -17,7 +19,9 @@ function App() {
                 <p>
                     Table
                 </p>
-
+                <div className="abovetable">
+                    <SearchField/>
+                </div>
                 <Table headers={dataHeader} data={data} />
 
 

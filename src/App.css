@@ -27,3 +27,11 @@
 .App-link {
     color: #2999fb;
 }
+.abovetable {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    margin-right: 100px;
+
+}
