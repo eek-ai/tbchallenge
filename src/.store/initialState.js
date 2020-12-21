@@ -1,9 +1,6 @@
 const initialState = {
 
     columns: {
-        id:{
-            style:'left',
-        },
         name:{
             title:'NAME',
             style:'left',
@@ -32,10 +29,7 @@ const initialState = {
         },
         price:{
             title:'PRICE PER M' + String.fromCharCode(179),
-            style:'right',
-        },
-        favorite:{
-            title:'',
+            style:'price',
         }
     },
 

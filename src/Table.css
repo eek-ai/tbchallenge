@@ -47,7 +47,14 @@
 
 .price{
     color: #EC773C;
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
+.price:before{
+    content:'€';
+}
+
 .multiple {
     color: #5E91D0;
     background-color: #ECF2FD;
