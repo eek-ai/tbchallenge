@@ -48,12 +48,17 @@
 .price{
     color: #EC773C;
 }
-.multiple{
+.multiple {
     color: #5E91D0;
-    background-color: #ECF2FD ;
-}
-.multiple{
-    color: #5E91D0;
-    background-color: #ECF2FD ;
-
+    background-color: #ECF2FD;
+    border-radius: 10px 10px 10px 10px;
+    max-height: 30px;
+    min-height: 30px;
+    max-width: 150px;
+    min-width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items:center;
+    padding-left: 10px;
 }

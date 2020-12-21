@@ -2,6 +2,8 @@ import React from 'react';
 import './SearchField.css';
 import { connect } from 'react-redux';
 
+import imgSearch from './images/search.svg';
+
 import setFilters from './.store/actions/actionFilter';
 
 class SearchField extends React.Component {
@@ -18,7 +20,7 @@ class SearchField extends React.Component {
     render(){
         return (
             <div className="searchbox">
-                <span className="searchicon">Q</span>
+                <img src={imgSearch} height="30" className="searchicon"/>
                 <input className="search" placeholder="Type an ID ..." defaultValue={this.props.value} onChange={this.onChangeHandler}/>
             </div>
         );

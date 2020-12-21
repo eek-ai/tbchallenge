@@ -17,7 +17,6 @@ class App extends React.Component {
         fetch('https://private-734d5c-testproducts.apiary-mock.com/products')
             .then(response => response.json())
             .then(result => {
-                console.log(result);
                 this.props.setRowsFunction(result);
             })
             .catch(e => console.log(e));

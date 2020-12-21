@@ -1,16 +1,24 @@
 const initialState = {
 
     columns: {
+        id:{
+            style:'left',
+        },
         name:{
+            title:'NAME',
             style:'left',
         },
         species:{
             title:'SPECIES',
             style:'left',
+            label: true,
+            icon:'tree'
         },
         finishing:{
             title:'FINISHING',
             style:'left',
+            label: true,
+            icon:'gear'
         },
         thickness:{
             title:'THICKNESS, MM',
@@ -26,6 +34,9 @@ const initialState = {
             title:'PRICE PER M' + String.fromCharCode(179),
             style:'right',
         },
+        favorite:{
+            title:'',
+        }
     },
 
     rows: [],

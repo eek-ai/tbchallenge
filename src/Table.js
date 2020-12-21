@@ -1,5 +1,7 @@
 import React from 'react';
 import './Table.css';
+import Label from './Label';
+import Images from "./Images";
 
 class Table extends React.Component {
     constructor(props) {
@@ -50,11 +52,12 @@ class Table extends React.Component {
                 {this.props.data&&this.props.columns&&this.props.data.map((row,i)=> {
                     if(this.props.filters==''||this.props.filters==row['id'])
                     return (
-                        <div className={"row regularRow" + ((row['active'] != true) ? ' inactive' : '') + (this.isChecked(row['id']) ? ' selected' : '')} key={i} onClick={()=>{this.clickRow(row['id']);console.log('click')}}>
+                        <div className={"row regularRow" + ((row['active'] != true) ? ' inactive' : '')} key={i} onClick={()=>{this.clickRow(row['id'])}}>
                             {Object.keys(this.props.columns).map((fieldName, j) => (
                                 <div className={"cell " + this.props.columns[fieldName].style}
-                                     key={j}>{row[fieldName]}</div>
+                                     key={j}>{(this.props.columns[fieldName].label)?<Label data={row[fieldName]} icon={this.props.columns[fieldName].icon} />:row[fieldName]}</div>
                             ))}
+                            <div className="cell"><Images icon={(this.isChecked(row['id']) ? 'heartred' : 'heart')}/></div>
                         </div>
                     )
                 })}
