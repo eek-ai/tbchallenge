@@ -8,6 +8,7 @@
     font-size: 1.3rem;
     font-weight: 500;
     width: 200px;
+    padding-left: 10px;
 }
 .search:focus {
     outline: none;

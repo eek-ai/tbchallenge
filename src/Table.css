@@ -23,6 +23,9 @@
     opacity: 0.3;
     background: #CCC;
 }
+.selected{
+    background: rgba(176, 230, 255, 0.44);
+}
 
 .left {
     text-align: left;
@@ -40,7 +43,6 @@
     font-size: 1rem;
     font-weight: 350;
     color: black;
-
 }
 
 .price{

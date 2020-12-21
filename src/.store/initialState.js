@@ -29,6 +29,7 @@ const initialState = {
     },
 
     rows: [],
+    filters:''
 }
 
 export default initialState;

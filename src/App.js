@@ -32,9 +32,9 @@ class App extends React.Component {
                         Table
                     </p>
                     <div className="abovetable">
-                        <SearchField/>
+                        <SearchField value={this.props.filters}/>
                     </div>
-                    <Table columns={this.props.cols} data={this.props.rows}/>
+                    <Table columns={this.props.cols} data={this.props.rows} filters={this.props.filters}/>
 
                 </header>
             </div>
@@ -53,7 +53,8 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
     return {
         cols:state.dataInfo.columns,
-        rows:state.dataInfo.rows
+        rows:state.dataInfo.rows,
+        filters:state.dataInfo.filters
     }
 }
 

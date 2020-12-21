@@ -1,18 +1,25 @@
 import React from 'react';
 import './SearchField.css';
+import { connect } from 'react-redux';
+
+import setFilters from './.store/actions/actionFilter';
 
 class SearchField extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
+        this.onChangeHandler = this.onChangeHandler.bind(this);
     }
 
+    onChangeHandler(event){
+        this.props.setFiltersFunction(event.target.value.trim());
+    }
 
     render(){
         return (
             <div className="searchbox">
                 <span className="searchicon">Q</span>
-                <input className="search" placeholder="Type an ID ..."/>
+                <input className="search" placeholder="Type an ID ..." defaultValue={this.props.value} onChange={this.onChangeHandler}/>
             </div>
         );
 
@@ -20,4 +27,12 @@ class SearchField extends React.Component {
 
 }
 
-export default SearchField;
+function mapDispatchToProps(dispatch) {
+    return {
+        setFiltersFunction: filters => {
+            dispatch(setFilters(filters))
+        }
+    }
+}
+
+export default connect(null,mapDispatchToProps)(SearchField);
