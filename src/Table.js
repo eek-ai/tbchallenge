@@ -54,7 +54,7 @@ class Table extends React.Component {
                         return (
                             <div className={"row regularRow" + ((row['active'] != true) ? ' inactive' : '')} key={i} onClick={()=>{this.clickRow(row['id'])}}>
                                 {Object.keys(this.props.columns).map((fieldName, j) => (
-                                    <div className={"cell " + (this.props.columns[fieldName].style!==undefined?this.props.columns[fieldName].style:'')}
+                                    <div className={"cell ellipsis " + (this.props.columns[fieldName].style!==undefined?this.props.columns[fieldName].style:'')}
                                          key={j}>{(this.props.columns[fieldName].label)?<Label data={row[fieldName]} icon={this.props.columns[fieldName].icon} />:row[fieldName]}</div>
                                 ))}
                                 <div className="cell"><Images icon={(this.isChecked(row['id']) ? 'heartred' : 'heart')}/></div>

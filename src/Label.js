@@ -6,7 +6,9 @@ class Label extends React.Component {
         return (
             <div className="multiple">
                 <Images icon={this.props.icon}/>
-                {Array.isArray(this.props.data)&&this.props.data.join(', ')}
+                <span className="ellipsis">
+                    {Array.isArray(this.props.data)&&this.props.data.join(', ')}
+                </span>
             </div>
         )
     }
