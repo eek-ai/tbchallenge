@@ -6,10 +6,6 @@ import HeartRed from './images/heartred.svg';
 import './Images.css';
 
 class Images extends React.Component {
-    constructor(props){
-        super(props)
-    }
-
     selectImage(){
         switch (this.props.icon) {
             case 'gear':
@@ -28,7 +24,7 @@ class Images extends React.Component {
     render(){
         return (
             <div className="icon">
-                <img src={this.selectImage()} height="20"/>
+                <img src={this.selectImage()} height="20" alt=""/>
             </div>
         )
     }

@@ -20,7 +20,7 @@ class SearchField extends React.Component {
     render(){
         return (
             <div className="searchbox">
-                <img src={imgSearch} height="30" className="searchicon"/>
+                <img src={imgSearch} height="30" className="searchicon" alt=""/>
                 <input className="search" placeholder="Type an ID ..." defaultValue={this.props.value} onChange={this.onChangeHandler}/>
             </div>
         );

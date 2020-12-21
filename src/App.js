@@ -9,10 +9,6 @@ import setRows from './.store/actions/actionData';
 
 class App extends React.Component {
 
-    constructor(props){
-        super(props);
-    }
-
     componentDidMount(){
         fetch('https://private-734d5c-testproducts.apiary-mock.com/products')
             .then(response => response.json())

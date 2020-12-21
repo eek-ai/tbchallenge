@@ -2,10 +2,6 @@ import React from 'react';
 import Images from './Images';
 
 class Label extends React.Component {
-    constructor(props){
-        super(props)
-    }
-
     render(){
         return (
             <div className="multiple">
